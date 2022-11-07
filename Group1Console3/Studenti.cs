@@ -6,22 +6,19 @@ using System.Threading.Tasks;
 
 namespace Group1Console3
 {
-    internal class Studenti
+    internal class Studenti:Person
     {
-        public Studenti(string emri,string mbiemri,int mosha)
+        public Studenti(string emri,string mbiemri,int mosha):base(emri,mbiemri)
         {
-            Emri = emri;
-            Mbiemri = mbiemri;
             Mosha = mosha;
         }
-        public string Emri { get; set; }
-        public string Mbiemri { get; set; }
+
 
         public int Mosha { get; set; }
 
-        public void Pershendete()
+        public override void Pershendete()
         {
-            Console.WriteLine($"Tungjatjeta {Emri},{Mbiemri}");
+            Console.WriteLine($"Tungjatjeta student {Emri},{Mbiemri}");
         }
 
     }

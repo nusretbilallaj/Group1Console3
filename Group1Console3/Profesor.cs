@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace Group1Console3
 {
-    internal class Profesor
+    internal class Profesor:Person
     {
-        public Profesor(string emri, string mbiemri)
+        public Profesor(string emri, string mbiemri):base(emri,mbiemri)
         {
-            Emri = emri;
-            Mbiemri = mbiemri;
         }
-        public string Emri { get; set; }
-        public string Mbiemri { get; set; }
 
-        public void Pershendete()
+
+        public override void Pershendete()
         {
             Console.WriteLine($"Tungjatjeta profesor {Emri},{Mbiemri}");
         }
